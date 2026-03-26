@@ -23,10 +23,13 @@ a GitHub Classroom repository was created to store the journa. I have learned th
 This  helps ensure that the progress is recorded as per weekly tutorial activities and learning outcomes. which is very crutial fro assessments.
 # SSH Authentication
 I have used SSH keys to ensure secure connection  between ubuntu system  and GitHub. I have learned the difference between public  key which  can be uploaded to Github and private key which should ne kept secret. this seems to be real -world example of public-key cryptography.
+
 #challenges
 I have faced a lots of difficulties  such as firstly, i  got confused between files and directories and i have been using incorrect commanda systax as i am not used to this commands as didn't have a quiet strong knowledge  of this commands and i was  running commands outside the repository  and i got confused understanding SSH key formats. however  this types of mistakes helped me to better understand how  the system works and what happend if i did input wrong things to system it returns wrong outputs and fail the system.
+
 #Reflections
 The initial setup of Ubuntu and SSH connection was a bit of challenging due to multiple tools involvement (virtual box, Putty, Github). Also learning Git workflow was valuable , providing confidence for version control in subsequent weeks too.
+
 #Insights
 This week showed that cryptography is not just a theory, its a practical setup, secure access and system configuration are qually important.SSH itself is a real-life application of cryptography widely used for secure communication and authentication.
 
