@@ -1,9 +1,11 @@
-from pycipher import caesar
+from pycipher import Caesar
 
 plaintext = "HELLO WORLD"
-cipher = caesar(key=3)
+cipher = Caesar(key=3)
+
 encrypted = cipher.encipher(plaintext)
-decrypt =cipher.decipher(encrypted)
-print("plintext:" , plaintext)
-Print("Encrypted:" ,encrypted)
-print("decrypted:" , decrypted)
+decrypted = cipher.decipher(encrypted)
+
+print("Plaintext:", plaintext)
+print("Encrypted:", encrypted)
+print("Decrypted:", decrypted)
