@@ -1,4 +1,4 @@
-<img width="940" height="805" alt="image" src="https://github.com/user-attachments/assets/cf470905-6fba-4973-8397-9649816f3660" />## Week 02 journal Entry
+## Week 02 journal Entry
 ## COIT3240 Applied Cryptography -classical Cipher
 
 ## Overview
@@ -44,10 +44,14 @@ i have used a  brute force approach  totest allpossible Caesar cipher key (1-25)
 <img width="940" height="805" alt="image" src="https://github.com/user-attachments/assets/05fe64fe-8e20-42fd-a870-f0697f7bb0a9" />
 -screenshot showing  brute force loop with HELLOWORLD visible with key = 3.
 This things demonstrates that the Caesar cipher is extremely weak because an attacker can easily recover the message without knowing the key.
+## Task 7: Rows/Columns Decrypt (Homework)
+A rows/columns transposition example has been reviewed using key `164325` and ciphertext `cieaexshxettrbxass`. The decrypted plaintext was:
+**caesar is the best**
+This task has showed that transposition ciphers rearranges the positions of letters rather than just changing them and making them different from substitution ciphers like Caesar.
 
-## Security Analysis
+## Security Analysis  
 
-Although the Caesar cipher functions correctly, it provides almost no real security inreal world. The main weaknesses include:-
+However, the Caesar cipher works somewhat correctly, it is not secure. The main weaknesses are as follows:
 
 - Have extremely small key space.
 - Predictable substitution pattern.
@@ -73,21 +77,8 @@ This week significantly improved my understanding of how encryption works in pra
 
 The brute force exercise was particularly useful, as it showed how quickly a weak cipher can be broken. This provides a strong foundation for understanding why modern cryptographic systems require much larger key spaces and more complex algorithms.
 
-## Evidence of Work Completed
-
-The following evidence supports the work completed this week:
-
-- Python virtual environment setup
-- installation of `pycipher`
-- Caesar cipher implementation script (`cipher_test.py`)
-- successful encryption and decryption output
-- brute force attack output showing all key possibilities
-- decryption of ciphertexts (AUSTRALIA and BELGIUM)
-- Git commits and successful push to repository
-
-## References
-
-- pycipher documentation: https://pycipher.readthedocs.io/
-- Week 2 lecture slides and tutorial materials
-
-
+Novel Insights
+Whike completing this OTP tasks i hvae noted that  a OTP secure if the key is 
+-Truly a random 9not pseudorandom).
+-At least as long as the message.
+Should not be reused.
