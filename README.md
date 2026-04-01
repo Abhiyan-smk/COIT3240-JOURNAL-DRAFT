@@ -1,1 +1,7 @@
-<img width="940" height="627" alt="image" src="https://github.com/user-attachments/assets/88b1edb0-683f-4a9c-954e-d4bbc3320566" />
+- TEST33E5
+- Student Name: Abhiyan Simkhada
+- Student ID: 12263049
+- Student Email: abhiyan.simkhada@cqumail.com
+- Campus:Central Queensland University
+- Tutor: gary Zhai
+- TEST33E5
