@@ -1,4 +1,4 @@
-<img width="522" height="666" alt="image" src="https://github.com/user-attachments/assets/3fb3ab65-89dd-41c1-8143-77049c82ac06" />## Week 02 journal Entry
+<img width="940" height="805" alt="image" src="https://github.com/user-attachments/assets/cf470905-6fba-4973-8397-9649816f3660" />## Week 02 journal Entry
 ## COIT3240 Applied Cryptography -classical Cipher
 
 ## Overview
@@ -32,34 +32,38 @@ Since the key is unknown, I have used a brute force approach: try all 26 possibl
 
 ## Task 5: Implement Caesar Cipher in Python
 The Caesar cipher was implemented using 'Pycipher' library in python. Thisapproach has all0wed to encrypt and ecrypt the process to be tetsted efficiently without manually coding the alogrithms from the scratch. The following script was used 
+<img width="475" height="432" alt="image" src="https://github.com/user-attachments/assets/b56dc403-6429-4fa6-aa57-648dd7919223" />
+-screenshot showing  cipher_test.py code
+<img width="940" height="300" alt="image" src="https://github.com/user-attachments/assets/02044f8b-41bd-45a1-88da-03052d66c6a6" />
 
-## Brute Force Attack
 
-A brute force approach was implemented using Python to test all possible Caesar cipher keys (1–25). The output displayed all possible decrypted results, making it easy to identify the correct plaintext:
 
-HELLOWORLD (key = 3)
-
-This clearly demonstrated that the Caesar cipher is highly insecure due to its very small key space. An attacker can easily recover the original message by checking all possibilities.
+-screenshot showing execution of cipher_test.py
+## Task 6: Brute Force Attacking Using Python
+i have used a  brute force approach  totest allpossible Caesar cipher key (1-25).
+<img width="940" height="805" alt="image" src="https://github.com/user-attachments/assets/05fe64fe-8e20-42fd-a870-f0697f7bb0a9" />
+-screenshot showing  brute force loop with HELLOWORLD visible with key = 3.
+This things demonstrates that the Caesar cipher is extremely weak because an attacker can easily recover the message without knowing the key.
 
 ## Security Analysis
 
-Although the Caesar cipher functions correctly, it provides almost no real security. The main weaknesses include:
+Although the Caesar cipher functions correctly, it provides almost no real security inreal world. The main weaknesses include:-
 
-- extremely small key space
-- predictable substitution pattern
-- vulnerability to brute force attacks
-- reliance on recognisable language
+- Have extremely small key space.
+- Predictable substitution pattern.
+- It is vulnerability to brute force attacks.
+- Mainly reliance on recognisable language.
 
 This shows that correctness of encryption does not guarantee security.
 
 ## Challenges Encountered
 
-Several issues were encountered during this week:
+Several issues were encountered during this week:-
 
-- syntax errors in Python (missing colons, incorrect indentation)
-- incorrect module name usage (`picipher` instead of `pycipher`)
-- confusion between terminal commands and Python interpreter
-- minor Git tracking issues with untracked files
+- syntax errors in Python (missing colons, incorrect indentation was the main).
+- incorrect module name usage (`picipher` instead of `pycipher`).
+- i got confusion between terminal commands and Python interpreter.
+- got minor Git tracking issues with untracked files.
 
 These were resolved by carefully reviewing commands and understanding the correct workflow.
 
