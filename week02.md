@@ -1,49 +1,37 @@
+<img width="522" height="666" alt="image" src="https://github.com/user-attachments/assets/3fb3ab65-89dd-41c1-8143-77049c82ac06" />## Week 02 journal Entry
+## COIT3240 Applied Cryptography -classical Cipher
+
 ## Overview
- In this week i really statrted working on  classical ciphers in hands on way  rather than just  reading about them. The tutorials tasks helped me to think  carefully about  how  the ciphers actually worked. In the tutorial we need to do it manually first before using python later on and this kind of things make me  feel a lot of more practical than week 1 which  was mostly setup and getting  my environment ready for coming weeks.
-##Quiz and Lectures
-i have completed the quizes before doing  the tutorial;s works  which helped me refresh the main concepts from the lecture and the classical ciphers notes. The lecture materials  was very clear for understanding classicla ciphers and uses of its logics for encryptions not because they are strong in real security setting. What stood out for me is that  the unit kept linking to old cipher tomoedern ideas subsitution, permutations nad brute force attacks.
-## Environment Setup
+In this week i really statrted working on  classical ciphers in hands on way  rather than just  reading about them. The tutorials tasks helped me to think  carefully about  how  the ciphers actually worked. In the tutorial we need to do it manually first before using python later on and this kind of things make me  feel a lot of more practical than week 1 which  was mostly setup and getting  my environment ready for comingup weeks.
 A Python virtual environment was created to manage dependencies. The `pycipher` library was installed and used to implement classical cipher operations. This ensured that all cryptographic testing was done in an isolated and controlled environment.
+## Task Completed
+## Task 1: Week 2 Quiz
+i have completed the quizes before doing  the tutorials works which helped me refresh the main concepts from the lecture and the classical ciphers notes. I also found the questions on substitution VS transposition cipher straightforward after watching the lecture.I initially answered one question wrong  like i got confused  the vignere cipher (polyalphabetic substitution) with the playfair cipher (diagraph substitution) and theni have corrected myself by re-reading the lecture slides before the tutorial started. The lecture materials  was very clear for understanding classicla ciphers and uses of its logics for encryptions not because they are strong in real security setting. What stood out for me is that  the unit kept linking to old cipher tomoedern ideas subsitution, permutations and brute force attacks.
 
-## Caesar Cipher Implementation
+## Task 2: Caesar Decrypt (Key 15) — Manual
+Ciphertext:phjigpaxp
+The caesar cipher shift each letters by a fixed key , in order todecrypt ,i have shited  each letters back by 15 position (or forward by  26-15= 11 position).
+Alphabet position (0-indexed):a=0, b=1,c=2,d=3,.....z=25
+![IMG_2496](https://github.com/user-attachments/assets/af764933-0a6a-4842-ab77-0caacc87ae63)
+## Task 3: Caesar Cipher using Python (Pycipher)  
+The `pycipher` library was used to verify encryption and decryption results. This allowed the cipher to be tested programmatically rather than manually.
+<img width="898" height="253" alt="image" src="https://github.com/user-attachments/assets/a0652e17-0b77-4e24-981f-89d09a90a818" />
+ - the image shows the plaintext: AUSTRALIA  and it's Ciphertext: PHJIGPAXP and plaintext: BELGIUM and ciphertext: KNUPRDV
+ 
+A Caesar cipher was implemented using Python which is also shown in the below image which represents that the plain text was correctly encrypted to "KHOORZRUOG" and successfully decrypted back to "HELLOWORLD". This confirms that the implementation is functioning correctly.
 
-A Caesar cipher was implemented using Python. The plaintext:
-
-HELLO WORLD
-
-was encrypted using a key of 3, producing:
-
-KHOORZRUOG
-
-The decrypted result returned:
-
-HELLOWORLD
+<img width="940" height="300" alt="image" src="https://github.com/user-attachments/assets/ef63863b-9fa6-417d-a2c3-9b9918233df6" />
 
 This confirmed that both encryption and decryption were working correctly. One important observation was that spaces were removed during processing, which highlights how implementation details can affect output.
 
-## Known-Key Decryption
+## Task 4: Caesar Decrypt without Key —Brute Force Manual and Pycipher
+Since the key is unknown, I have used a brute force approach: try all 26 possible keys and looking for a meaningful English word.
+<img width="522" height="666" alt="image" src="https://github.com/user-attachments/assets/820ecdd9-9986-473d-ae5c-ebf3cadc94a6" />
+- Screenshot showing BELGIUM output
+  This task demoonstrated that even wthout knowing the key , classical ciphers can be broken by analysing outputs and identifying meaningful patterns in language.
 
-A ciphertext was decrypted using a known key:
-
-pjhigpaxp (key = 15)
-
-The output obtained was:
-
-AUSTRALIA
-
-This demonstrated how the Caesar cipher works when the key is known and reinforced understanding of shifting characters within the alphabet.
-
-## Decryption Without Known Key
-
-A second ciphertext was analysed without knowing the key:
-
-knuprdv
-
-Different key values were tested until meaningful plaintext appeared. The correct result was:
-
-BELGIUM (key = 9)
-
-This task showed that classical ciphers can often be broken by testing possibilities and recognising valid language patterns, rather than relying purely on mathematical methods.
+## Task 5: Implement Caesar Cipher in Python
+The Caesar cipher was implemented using 'Pycipher' library in python. Thisapproach has all0wed to encrypt and ecrypt the process to be tetsted efficiently without manually coding the alogrithms from the scratch. The following script was used 
 
 ## Brute Force Attack
 
