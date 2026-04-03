@@ -5,6 +5,8 @@ The main task include installing Ubuntu Linux connecting through putty,configuri
 Although there was no any kind of complex  cryptographical algorithms were studied yet, this setup is essential because this cryptographic system are implemented and tested using command lines and tools alnongwith programming. 
 #ubuntu and putty setup
 ubuntu server was installled and accesses remotely using Putty and this things have  introduced me to  work in a linux command line environment which is a bit diffrent from using  a normal desktop interface.Initially  it was a bit confusing  because everything had to be done using commands. However i have realized that this environment is  very powerful and quiet easy once u are used to the setup  things and also found out that this is commonly used in  cybersecurity and cryptography.
+<img width="1725" height="917" alt="Screenshot 2026-03-14 013311" src="https://github.com/user-attachments/assets/fc6cfa2e-fe1e-4e0b-b5f6-e0089efdaa3c" />
+
 # Linux Commands
 i have practiced basiccommands such as :-
 1pwd(which shows current directory)
