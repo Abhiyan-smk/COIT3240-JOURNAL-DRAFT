@@ -1,5 +1,5 @@
 ## Week 03 Journal Entry 
-## COIT3240 Applied Cryptography
+## COIT3240 Applied Cryptography -Encryption and Attacks
 ## Introduction
 
 This week I have focused on understanding encryption techniques and attack concepts through practical implementation. The main objective was to explore how block ciphers such as DES operate, how different modes of operation affect security, and how encryption can be applied in real-world scenarios.
