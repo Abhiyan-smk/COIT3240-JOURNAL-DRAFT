@@ -21,13 +21,13 @@ A plaintext file of exactly 24 bytes was created This confirmed the file size wa
  <img width="940" height="147" alt="image" src="https://github.com/user-attachments/assets/7a80b130-d22e-4259-acdd-cce46afc0207" />
 
 -Screenshot showing wc -c file.txt , encryption command and xxd file.enc
-DES is a block cipher that processes fixed 8-byte blocks. Since the plaintext size was exactly 24 bytes, and no padding was required. ECB mode encrypts  each block independentally.
+DES is a block cipher that processes fixed 8-byte blocks. Since the plaintext size was exactly 24 bytes, and no padding was required there. ECB mode encrypts each block independentally.
 
 ## Task 5: DES without Padding and ECB Behaviour
-I have performed DES encryption again using ECB mode with no padding and a fixed key. A small modification was made to the plaintext by changing one character in the first block.
-The `xxd` output showed that only the first ciphertext block changed, while the remaining blocks stayed exactly the same. This is because ECB encrypts each block independently.
+I have performed DES encryption again using ECB mode with no padding and a fixed key and a small modification was made to the plaintext by changing one character in the first block.
+Then the `xxd` output showed that only the first ciphertext block changed, while the remaining blocks stayed exactly the same. This is because ECB encrypts each block independently.
 
-This demonstrates a major weakness of ECB mode: identical plaintext blocks always produce identical ciphertext blocks. As a result, patterns in the plaintext are preserved in the ciphertext, making ECB insecure for real-world use.
+This demonstrates a major weakness of ECB model, identical plaintext blocks always produce identical ciphertext blocks. As a result, patterns in the plaintext are preserved in the ciphertext, making ECB insecure for real-world use.
 
 The experiment clearly shows that even a small change in one block does not affect other blocks, highlighting the lack of diffusion in ECB mode.
 <img width="940" height="296" alt="image" src="https://github.com/user-attachments/assets/cafed195-89b3-4aa5-857b-978c480646a2" />
