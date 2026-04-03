@@ -74,11 +74,8 @@ These were resolved by carefully reviewing commands and understanding the correc
 ## Reflection
 
 This week significantly improved my understanding of how encryption works in practice. Writing and testing the Caesar cipher made the process much clearer than just reading theory. The most important insight was that a cipher can be logically correct but still insecure.
-
 The brute force exercise was particularly useful, as it showed how quickly a weak cipher can be broken. This provides a strong foundation for understanding why modern cryptographic systems require much larger key spaces and more complex algorithms.
 
-Novel Insights
-Whike completing this OTP tasks i hvae noted that  a OTP secure if the key is 
--Truly a random 9not pseudorandom).
--At least as long as the message.
-Should not be reused.
+## Novel Insights
+Whiie completing this OTP tasks i hvae noted that  a OTP secure if the key is a truly ana random  not any kind of pseudorandom secondly it should be at least as long as the message and it should not be reused.
+
