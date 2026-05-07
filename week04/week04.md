@@ -14,7 +14,7 @@ The XOR result was:
 
 XOR returns 1 when the bits are different and 0 when the bits are the same. XOR is important in cryptography because it is used in stream ciphers, one-time pads and CTR mode encryption.
 
-![XOR Screenshot](week04/images/week04-task1-xor.png)
+![XOR Screenshot](images/week04-task1-xor.png)
 ---
 
 ## Task 2 – Simple Block Cipher (SBC)
@@ -29,7 +29,7 @@ The plaintext blocks and ciphertext blocks were displayed separately. This demon
 
 This type of encryption is weak because the same plaintext block always produces the same ciphertext block.
 
-![SBC Screenshot](week04/images/week04-task2-sbc.png)
+![SBC Screenshot](images/week04-task2-sbc.png)
 
 ---
 ### SBC Table Example
@@ -56,7 +56,7 @@ Unlike ECB mode, repeated plaintext blocks do not produce identical ciphertext b
 
 This improves confidentiality and hides plaintext patterns better than simple block encryption.
 
-![CBC Screenshot](week04/images/week04-task3-cbc.png)
+![CBC Screenshot](images/week04-task3-cbc.png)
 ---
 
 ## Task 4 – CTR Mode Encryption
@@ -67,7 +67,7 @@ Unlike CBC mode, CTR mode does not depend on previous ciphertext blocks. Each bl
 
 CTR mode behaves similarly to a stream cipher and allows parallel encryption and decryption.
 
-![CTR Screenshot](week04/images/week04-task4-ctr.png)
+![CTR Screenshot](images/week04-task4-ctr.png)
 
 ---
 
@@ -107,7 +107,7 @@ This demonstrated symmetric encryption because the same key was used for both en
 
 The ciphertext output appeared random and unreadable without the key.
 
-![AES Screenshot](week04/images/week04-task6-aes.png)
+![AES Screenshot](images/week04-task6-aes.png)
 
 ---
 
