@@ -75,9 +75,9 @@ This demonstrated how RSA uses the public key for encryption and the private key
 
 I generated a real RSA key pair using OpenSSL. I used a 2048-bit RSA private key and then extracted the matching public key.
 
-Commands used:
+Commands used
 
-```bash
+
 openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -out private_key.pem
 
 openssl pkey -in private_key.pem -pubout -out public_key.pem
@@ -93,16 +93,16 @@ echo "This is my Week 5 RSA secret message." > message.txt
 The message was encrypted using the RSA public key:
 openssl pkeyutl -encrypt -pubin -inkey public_key.pem -in message.txt -out message.enc
 
-The encrypted message was then decrypted using the RSA private key:
+The encrypted message was then decrypted using the RSA private key
 openssl pkeyutl -decrypt -inkey private_key.pem -in message.enc -out message_decrypted.txt
+The decrypted output has been matched with the original plaintext message which demonstrates successful RSA encryption and decryption using OpenSSL 
 
-The decrypted output matched the original plaintext message, demonstrating successful RSA encryption and decryption using OpenSSL.
 ---
 ## Task 4 – RSA Encryption in OpenSSL
 
 I used OpenSSL to encrypt and decrypt a confidential text message using RSA public and private keys.
 
-First, I created a plaintext message file using:
+First, I created a plaintext message file using
 
 openssl pkeyutl -encrypt -pubin -inkey public_key.pem -in message.txt -out message.enc
 
