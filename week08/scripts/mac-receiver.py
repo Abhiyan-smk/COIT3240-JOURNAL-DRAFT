@@ -7,7 +7,7 @@ import mac
 key_hex = "0123456789012345678901234567890123456789012345678901234567890123"
 
 # message and tag received
-rx_message = "message to hash"
+rx_message = "message was changed"
 rx_tag_text = "F4VAdKHlf/5MBIhJz+C9py1yoCoBhspsRA0SSX4FibE="
 
 # Convert base64 tag back to binary
