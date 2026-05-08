@@ -61,7 +61,7 @@ The public key information could be transmitted openly, while the actual shared 
 
 This demonstrated how TLS uses public key cryptography during the handshake process to securely establish encryption keys for later communication.
 
-![Server Key Exchange](images/week07-task1-serverkeyexchange.png)
+![Server Key Exchange](images/week07-task1-serverkeyexchange-dh.png)
 
 ---
 
