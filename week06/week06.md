@@ -48,8 +48,11 @@ openssl pkeyutl -derive -inkey privateB.pem -peerkey publicA.pem -out secretB.bi
 The shared secret values were examined using:
 
 xxd secretA.bin
+
 xxd secretB.bin
+
 ![XXD Secret Output](images/week06-task2-xxd-secret-output.png)
+
 Finally, both secrets were compared using:
 
 cmp secretA.bin /tmp/B/secretB.bin && echo "Secrets match"
@@ -63,6 +66,9 @@ This confirmed that both users independently generated the same shared secret ev
 ![DH Parameter and Key Generation](images/week06-task2-dhke-parameter-key-generation.png)
 
 ![Shared Secret Generation](images/week06-task2-shared-secret-generation.png)
+
+![XXD Secret Output](images/week06-task2-xxd-secret-output.png)
+
 
 ![Secret Match Confirmation](images/week06-task2-secret-match.png)
 
