@@ -37,7 +37,7 @@ Supported groups included:
 
 This demonstrated how the client advertises supported cryptographic algorithms and key exchange groups to the server.
 
-![TLS Packet List](images/week07-task1-tls-packet-list.png)
+![TLS Packet List](images/week07-task1-tls12-packet-list.png)
 
 ![Supported Groups](images/week07-task1-supported-groups.png)
 
@@ -61,7 +61,7 @@ The public key information could be transmitted openly, while the actual shared 
 
 This demonstrated how TLS uses public key cryptography during the handshake process to securely establish encryption keys for later communication.
 
-![Server Key Exchange](images/week07-task1-server-key-exchange.png)
+![Server Key Exchange](images/week07-task1-serverkeyexchange.png)
 
 ---
 
@@ -82,7 +82,7 @@ This demonstrated how TLS uses certificates and public key cryptography to authe
 
 The RSA public key allows clients to verify the identity of the server before encrypted communication begins.
 
-![RSA Certificate](images/week07-task1-rsa-certificate.png)
+![RSA Certificate](images/week07-task1-rsa-certificate-key.png)
 
 ---
 
