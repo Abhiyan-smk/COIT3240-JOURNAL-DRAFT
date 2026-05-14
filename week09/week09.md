@@ -111,11 +111,11 @@ If these checks succeed, the browser trusts that it is communicating with the le
 
 The following screenshots show the TLS Certificate message and certificate details identified in Wireshark.
 
-![TLS Certificate Handshake Message](images/week09-tls-certificate-message.png)
+![TLS Certificate Handshake Message](images/week09-task1-certificate-message.png)
 
-![TLS Certificate Details](images/week09-tls-certificate-details.png)
+![TLS Certificate Details](images/week09-task3-public-key.png)
 
-![TLS Certificate Chain](images/week09-tls-certificate-chain.png)
+![TLS Certificate Chain](week09-task5-certificate-chain.png)
 
 ---
 
