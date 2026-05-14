@@ -115,7 +115,7 @@ The following screenshots show the TLS Certificate message and certificate detai
 
 ![TLS Certificate Details](images/week09-task3-public-key.png)
 
-![TLS Certificate Chain](week09-task5-certificate-chain.png)
+![TLS Certificate Chain](images/week09-task5-certificate-chain.png)
 
 ---
 
