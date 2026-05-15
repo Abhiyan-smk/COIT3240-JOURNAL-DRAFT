@@ -103,7 +103,7 @@ I noticed that the private key file was significantly larger and had stricter pe
 
 This activity demonstrated how RSA keys are generated in real systems instead of using small manual examples.
 
-![RSA OpenSSL Key Generation Screenshot](images/week05-task3-rsa-key-generation.png)
+![RSA OpenSSL Key Generation Screenshot](images/week05-task3-openssl-rsa-keys.png)
 
 ---
 
