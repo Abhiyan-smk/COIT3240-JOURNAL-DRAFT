@@ -73,7 +73,7 @@ This demonstrated how RSA uses:
 
 Initially I assumed RSA encryption worked similarly to symmetric encryption from the previous week. After completing the calculations, I understood that RSA uses mathematically related keys instead of sharing the same secret key.
 
-![RSA Encryption Screenshot](images/week05-task2-rsa-encryption.png)
+![RSA Encryption Screenshot](images/week05-task3-openssl-rsa-keys.png)
 
 ---
 
