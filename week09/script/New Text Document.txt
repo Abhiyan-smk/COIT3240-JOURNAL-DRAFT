@@ -1,0 +1,90 @@
+If your teacher said yes, then it is fine to upload them to your GitHub.
+
+Use this idea:
+
+Teacher allows upload
+↓
+You put the files in your own GitHub repository
+↓
+You run/change the examples
+↓
+You push your completed work
+If the files are already in Ubuntu
+
+In PuTTY, go to the folder where the files are:
+
+cd your-folder-name
+ls
+
+Check you can see the files.
+
+Then initialise Git if the folder is not already a Git repository:
+
+git init
+
+Add your GitHub repository as the remote:
+
+git remote add origin git@github.com:niveousswan/YOUR-REPOSITORY-NAME.git
+
+Then add, commit, and push:
+
+git add .
+git commit -m "Upload cryptography demo files"
+git branch -M main
+git push -u origin main
+If you already connected the folder to GitHub before
+
+Check:
+
+git remote -v
+
+If it already shows your GitHub repository, just do:
+
+git add .
+git commit -m "Upload cryptography demo files"
+git push
+If Git says identity not set
+
+Run:
+
+git config --global user.name "Gary Zhai"
+git config --global user.email "niveousswan@hotmail.com"
+
+Then commit again:
+
+git commit -m "Upload cryptography demo files"
+git push
+Simple meaning
+git add .
+
+means:
+
+Git, prepare all these files.
+
+git commit -m "message"
+
+means:
+
+Git, save this version with a note.
+
+git push
+
+means:
+
+Send my saved work to GitHub.
+
+Safe folder structure
+
+You can organise it like this:
+
+crypto-lab/
+    demo/
+        aes-example.py
+        rsa-sign-example.py
+        dh-example.py
+        hmac-example.py
+    answers/
+        notes.md
+        screenshots/
+
+So yes: if your teacher gave permission, you can upload the files to your GitHub.
