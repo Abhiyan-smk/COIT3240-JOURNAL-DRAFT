@@ -6,19 +6,23 @@ A cryptographic hash function converts input data into a fixed-length output cal
 
 Hash functions are designed to:
 - produce a unique output for different inputs
-- be one-way functions
+- behave as one-way functions
 - detect changes to data
 
 I tested a SHA256 hash function in Python using the `cryptography` library.
 
 The program generated a SHA256 hash value for the plaintext message:
-- "Steven"
+- `"Steven"`
 
 The output displayed:
 - the raw byte hash value
 - the hexadecimal hash value
 
-Even a small change to the plaintext produces a completely different hash output.
+Even a very small change to the plaintext produced a completely different hash output.
+
+Initially I expected similar plaintext values to produce similar hashes. After testing different messages, I observed that hash outputs changed completely even when only one character was modified.
+
+This demonstrated an important security property known as the avalanche effect.
 
 ![Hash Example](images/week08-task1-hash-example.png)
 
@@ -36,7 +40,9 @@ This activity demonstrated that:
 - different hash algorithms produce different digest lengths
 - changing the input message completely changes the hash output
 
-This behaviour is called the avalanche effect.
+While comparing SHA256 and SHA512 outputs, I noticed that the hash values appeared random even though the same algorithm always produces the same result for identical input data.
+
+This activity reinforced the idea that cryptographic hashes are deterministic but highly sensitive to input changes.
 
 ![Modified Hash Example](images/week08-task2-modified-hash.png)
 
@@ -60,6 +66,8 @@ The program:
 
 The generated HMAC value can later be verified by another user who also knows the shared secret key.
 
+At first I thought HMAC simply encrypted the message. After analysing the output more carefully, I understood that HMAC does not hide the message contents. Instead, it verifies authenticity and integrity.
+
 ![HMAC Example 1](images/week08-task3-hmac-example1.png)
 
 ---
@@ -77,9 +85,13 @@ When the original message was verified, the authentication process succeeded.
 
 After modifying the message, the verification process failed and displayed:
 
-- "Oh no! Something is wrong"
+```text
+Oh no! Something is wrong
+```
 
 This demonstrated that HMAC can detect message modification and protect data integrity.
+
+One thing I found interesting was that the message itself remained readable, but any small modification caused the verification process to fail immediately.
 
 ![HMAC Verification](images/week08-task4-hmac-example2.png)
 
@@ -100,13 +112,15 @@ The output displayed:
 
 The MAC tag can later be verified by the receiver.
 
+This activity demonstrated how secure systems can verify whether transmitted data has been modified during communication.
+
 ![MAC Sender](images/week08-task5-mac-sender.png)
 
 ---
 
 ## Task 6 – MAC Receiver Verification
 
-I tested the MAC receiver program.
+I tested the MAC receiver verification program.
 
 The receiver:
 - received the message
@@ -115,11 +129,20 @@ The receiver:
 
 The verification result displayed:
 
-- Verified? True
+```text
+Verified? True
+```
 
 This confirmed that:
 - the message was authentic
 - the message contents were unchanged
+
+I noticed that successful verification depended on:
+- the correct message
+- the correct MAC tag
+- the correct shared secret key
+
+If any of these values changed, verification would fail.
 
 ![MAC Receiver Verification](images/week08-task6-mac-receiver.png)
 
@@ -131,12 +154,16 @@ I modified the received message while keeping the original MAC tag unchanged.
 
 After verification, the output displayed:
 
-- Verified? False
+```text
+Verified? False
+```
 
 This demonstrated that:
 - changing the message invalidates the MAC
 - MAC verification can detect tampering
 - integrity protection prevents unauthorized message modification
+
+Initially I assumed attackers might still be able to slightly modify messages without detection. After testing the modified message directly, I understood how sensitive MAC verification is to message changes.
 
 ![Modified Message Verification Failure](images/week08-task7-mac-modified-message.png)
 
@@ -154,18 +181,27 @@ One important observation was that hash functions are deterministic:
 
 The HMAC and MAC activities demonstrated how integrity and authentication are implemented in real communication systems.
 
-The modified message verification task was particularly important because it demonstrated that attackers cannot change messages without detection when MAC protection is used correctly.
-
-This week also helped me understand how:
+Initially I confused encryption with authentication because both involve cryptographic algorithms. After completing the activities, I understood the difference more clearly:
+- encryption protects confidentiality
 - hashes verify integrity
 - HMAC verifies integrity and authentication
-- MACs detect message tampering
 
-These concepts are widely used in:
+The modified message verification task was especially useful because it demonstrated that attackers cannot modify protected messages without detection when MAC protection is used correctly.
+
+This week also helped me understand how these concepts are used in:
 - TLS
 - HTTPS
 - APIs
 - secure communications
-- digital authentication systems
+- authentication systems
 
-Overall, the practical exercises improved my understanding of integrity protection, authentication and secure message verification.
+Overall, the practical exercises improved my understanding of:
+- hash functions
+- SHA256 and SHA512
+- avalanche effect
+- HMAC authentication
+- MAC verification
+- integrity protection
+- message tampering detection
+
+The activities demonstrated that secure communication systems require integrity checking and authentication in addition to encryption.
