@@ -1,10 +1,89 @@
-# Week 10 Tutorial – Security Project Progress Journal
+# Week 10 Tutorial – Quantum Computing, Cryptography and Security Project Progress Journal
 
 ## Objective
 
-The objective of this tutorial was to continue progressing the security project by configuring communication between Ubuntu virtual machines, testing network connectivity, establishing client-server communication, configuring an Apache web server, and capturing network traffic using packet analysis tools. The tutorial focused on practical implementation of networking and cybersecurity concepts within Oracle VirtualBox.
+The objective of this week’s tutorial was to develop an understanding of quantum computing concepts relevant to modern cryptography while continuing practical progress on the security project. The tutorial activities focused on discussing the potential impact of quantum computing on cryptographic systems, as well as implementing practical networking and security tasks using Ubuntu virtual machines within Oracle VirtualBox.
+
+The practical component of the tutorial involved configuring communication between virtual machines, testing network connectivity, establishing TCP communication, configuring an Apache web server, and capturing network traffic using packet analysis tools.
 
 ---
+
+# Part 1 – Quantum Computing and Cryptography Discussion
+
+## Introduction
+
+Quantum computing is an emerging area of computing that uses the principles of quantum mechanics to process information differently from classical computers. Unlike classical computers, which use binary bits represented as either 0 or 1, quantum computers use qubits, which can exist in multiple states simultaneously through a concept known as superposition.
+
+During the tutorial, several important concepts related to quantum computing and cryptography were discussed to develop an understanding of how future quantum systems may affect modern encryption algorithms and cybersecurity.
+
+---
+
+# 1. Qubits and Superposition
+
+A classical bit can only exist in one of two states:
+
+- 0
+- 1
+
+However, a quantum bit, or qubit, can exist in a combination of both states simultaneously. This is known as superposition.
+
+For example, a qubit represented as:
+
+```text
+0.8|0> + 0.6|1>
+```
+
+exists in both states until measurement occurs. Once measured, the qubit collapses into either state 0 or state 1. The probability of each result depends on the amplitude associated with each state.
+
+This capability allows quantum computers to process many possibilities simultaneously, making them significantly different from classical computers.
+
+---
+
+# 2. Quantum Computing and Cryptography
+
+Quantum computing has the potential to impact modern cryptographic systems significantly. One important discussion point was the effect of quantum computing on symmetric encryption algorithms such as AES.
+
+Quantum computers can reduce the time required for brute-force attacks using Grover’s algorithm. Although this does not completely break AES encryption, it effectively reduces the security strength of symmetric keys. Larger AES key sizes are therefore recommended to improve resistance against future quantum attacks.
+
+Another important topic discussed was Shor’s algorithm. Shor’s algorithm is capable of factoring very large numbers efficiently, meaning that public-key cryptographic systems such as RSA could become vulnerable if sufficiently powerful quantum computers become available in the future.
+
+This highlights the importance of developing post-quantum cryptographic algorithms that remain secure even in the presence of advanced quantum systems.
+
+---
+
+# 3. Quantum Cryptography and BB84
+
+Quantum cryptography focuses on using quantum mechanics to improve communication security rather than simply breaking existing encryption systems.
+
+One important example discussed during the tutorial was the BB84 protocol, which is a Quantum Key Distribution (QKD) protocol. BB84 allows two parties to securely exchange cryptographic keys while detecting any eavesdropping attempts during transmission.
+
+The purpose of BB84 is similar to classical key exchange algorithms because both methods aim to securely establish shared encryption keys between communicating systems.
+
+Quantum cryptography provides new approaches to secure communication that are difficult to achieve using classical systems alone.
+
+---
+
+# 4. Quantum Entanglement and Teleportation
+
+Quantum entanglement was also discussed during the tutorial. Entanglement occurs when two particles become linked in such a way that the state of one particle is connected to the state of another, even across long distances.
+
+Although entanglement is related to quantum teleportation, it does not allow faster-than-light communication. Classical communication channels are still required as part of the teleportation process, meaning information cannot travel faster than the speed of light.
+
+This is a common misconception often associated with quantum computing and quantum communication technologies.
+
+---
+
+# 5. Current State of Quantum Computing
+
+Current quantum computers are still limited in capability compared to classical systems. Modern quantum systems currently operate using hundreds or, in some cases, over one thousand qubits. However, practical implementation remains challenging due to instability, noise, and error correction limitations.
+
+Although quantum computing technology is advancing rapidly, large-scale practical applications capable of breaking widely used cryptographic systems are still under development.
+
+Overall, the tutorial discussion provided a useful introduction to the relationship between quantum computing and modern cryptography while highlighting the importance of future quantum-resistant security systems.
+
+---
+
+# Part 2 – Security Project Progress
 
 # 1. Virtual Machine Network Configuration
 
@@ -18,7 +97,7 @@ The following IP addresses were identified during the configuration process:
 The successful assignment of different IP addresses confirmed that both virtual machines were correctly configured on the same internal network and were ready for communication testing.
 
 ## Screenshot
-week10/images/Screenshot 2026-05-23 144129.png
+![Alt text](images/screenshot-1.png)
 
 ---
 
@@ -37,7 +116,7 @@ Successful replies were received from the destination machine, confirming that c
 This test verified that the Oracle VirtualBox networking configuration had been successfully implemented.
 
 ## Screenshot
-*(Insert Screenshot 1 – Successful ping communication between both virtual machines)*
+![Alt text](images/screenshot-1.png)
 
 ---
 
@@ -66,7 +145,7 @@ After establishing the connection, a test message was entered on the client virt
 The successful Netcat test demonstrated that both systems were capable of exchanging network data reliably.
 
 ## Screenshot
-*(Insert Screenshot 1 – Successful Netcat communication between both virtual machines)*
+![Alt text](images/screenshot-1.png)
 
 ---
 
@@ -101,7 +180,7 @@ The Apache default webpage HTML source code was successfully returned on the cli
 This demonstrated successful HTTP communication between the client and server virtual machines.
 
 ## Screenshot
-*(Insert Screenshot 2 – Successful Apache web server communication between both virtual machines using curl)*
+![Alt text](images/Screenshot-2.png)
 
 ---
 
@@ -128,7 +207,7 @@ During execution, tcpdump displayed that it was listening on the specified netwo
 This process demonstrated practical packet capture and traffic monitoring techniques commonly used in network security analysis and troubleshooting.
 
 ## Screenshot
-*(Insert Screenshot 3 – tcpdump listening on interface and monitoring HTTP traffic)*
+![Alt text](images/Screenshot-3.png)
 
 ---
 
@@ -147,14 +226,14 @@ The output confirmed that the `capture.pcap` file had been successfully created 
 This confirmed that network traffic had been successfully recorded for later packet analysis using tools such as Wireshark.
 
 ## Screenshot
-*(Insert Screenshot 4 – Directory listing showing the generated `capture.pcap` file)*
+![Alt text](images/Screenshot-4.png)
 
 ---
 
 # Conclusion
 
-During this tutorial, two Ubuntu virtual machines were successfully configured and connected within Oracle VirtualBox using a host-only network. Network connectivity was verified using the `ping` command, while Netcat was used to establish TCP communication between both systems.
+During this week’s tutorial, both theoretical and practical cybersecurity concepts were explored. The quantum computing discussion provided an understanding of important concepts such as qubits, superposition, quantum cryptography, BB84, Grover’s algorithm, and Shor’s algorithm, while also highlighting the possible future impact of quantum computing on existing cryptographic systems. Some of the quantum computing concepts were initially difficult to understand, particularly superposition and entanglement. After reviewing the lecture material again, the relationship between quantum computing and cryptography became clearer.
 
-An Apache2 web server was then installed and accessed remotely using HTTP requests between the virtual machines. Finally, tcpdump was used to capture network traffic generated during the communication process, and the resulting packet capture file was successfully stored for future analysis.
+The practical security project activities successfully demonstrated communication between Ubuntu virtual machines within Oracle VirtualBox. Network connectivity was verified using ping, TCP communication was tested using Netcat, and an Apache2 web server was configured and accessed remotely across the network. Network traffic generated during the communication process was then captured using tcpdump and stored in a packet capture file for future analysis.  Initially, there was some confusion identifying the correct network interface to monitor using tcpdump. After checking the available interfaces using the `ip addr` command, the correct interface was selected and packet capture worked successfully.
 
-Overall, the tutorial provided practical experience with virtual machine networking, client-server communication, web server configuration, and packet capture techniques relevant to cybersecurity and secure network communication.
+Overall, the tutorial provided valuable practical experience with networking, client-server communication, packet analysis, and cryptographic concepts relevant to cybersecurity and secure communication systems. Large technology companies such as IBM and Google are currently investing heavily in quantum computing research, which highlights the importance of developing post-quantum cryptographic standards before large-scale quantum systems become commercially practical.
