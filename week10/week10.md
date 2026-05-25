@@ -18,7 +18,7 @@ The following IP addresses were identified during the configuration process:
 The successful assignment of different IP addresses confirmed that both virtual machines were correctly configured on the same internal network and were ready for communication testing.
 
 ## Screenshot
-*(Insert Screenshot 1 – IP configuration using `ip addr` on both virtual machines)*
+week10/images/Screenshot 2026-05-23 144129.png
 
 ---
 
